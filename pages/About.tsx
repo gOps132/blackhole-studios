@@ -1,5 +1,6 @@
 import React from 'react';
 import { Camera, PenTool, Star } from 'lucide-react';
+import { getImageUrl } from '../components/ImportHelper';
 
 const About: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const About: React.FC = () => {
             <div className="relative rounded-xl overflow-hidden aspect-[3/4] border border-white/10 shadow-2xl">
               {/* Placeholder for professional headshot */}
               <img 
-                src="assets/myfacelol/me.png" 
+                src={getImageUrl('./assets/myfacelol/me.png')}
                 alt="Gian Cedrick Epilan" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
