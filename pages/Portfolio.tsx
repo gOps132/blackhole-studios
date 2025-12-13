@@ -2,54 +2,77 @@ import React, { useState, useMemo } from 'react';
 import { Project } from '../types';
 import Lightbox from '../components/Lightbox';
 
+const imageModules = import.meta.glob('../assets/**/*.{png,jpg,jpeg,svg}', { eager: true });
+
+// Helper function to resolve the correct image URL from the imported modules.
+// It normalizes the path to match the keys in imageModules.
+const getImageUrl = (path: string): string => {
+  const correctedPath = path.replace('./assets/', '../assets/').replace('.assets/', '../assets/');
+  
+  const module = imageModules[correctedPath] as { default: string };
+  if (module) {
+    return module.default;
+  }
+  console.warn(`Image not found for path: ${path}`);
+  return '';
+};
+
+
 const projects: Project[] = [
   {
     id: '1',
     title: 'City of Dreams - Digital Wallpaper',
     description: "I made this image of a city in night time to represent the romanticization of a big city. Lots of people romanticize moving to a place where they can find opportunity, a place they name a 'city of dreams'. Where bright neon lights outshine the brightest star and the darkest alleys where the sun can't reach. A city where a person can live out their dreams, may be the same one that can consume them.",
-    images: ['./assets/1. wallpaper/Epilan_act1.png'],
+    images: [getImageUrl('./assets/1. wallpaper/Epilan_act1.png')],
     type: 'design'
   },
   {
     id: '2',
     title: 'Blackhole Studios - Moodboard & Inspiration',
     description: "The genesis of the Blackhole Studios visual identity. This moodboard collages celestial textures, deep space palettes, and modern typography references to establish the atmospheric direction of the brand, focusing on the concept of 'creating universes'.",
-    images: ['.assets/2. branding/EPILAN_ACT2.png'],
+    images: [getImageUrl('./assets/2. branding/EPILAN_ACT2.png')],
     type: 'branding'
   },
   {
     id: '3a',
     title: 'Logo Design Concepts',
     description: "A showcase of initial logo sketches and concepts for different brands, including 'Celeb Snap,' 'Blackhole Studios,' and 'Snap Party.' This demonstrates the creative process from ideation to final design.",
-    images: ['./assets/3. logo design wireframe/Epilan_act3.png'],
+    images: [getImageUrl('./assets/3. logo design wireframe/Epilan_act3.png')],
     type: 'design'
   },
   {
     id: '3b',
     title: 'Blackhole Studios - Logo Construction',
     description: "The architectural blueprint of the brand. This wireframe demonstrates the geometric precision and grid systems used to construct the iconic eye-like black hole symbol. It showcases the mathematical approach to ensuring perfect symmetry and visual balance before the final rendering.",
-    images: ['./assets/4. logo design/1.png', './assets/4. logo design/2.png', './assets/4. logo design/3.png'],
+    images: [
+      getImageUrl('./assets/4. logo design/1.png'),
+      getImageUrl('./assets/4. logo design/2.png'),
+      getImageUrl('./assets/4. logo design/3.png')
+    ],
     type: 'branding'
   },
   {
     id: '3c',
     title: 'Blackhole Studios - Final Identity',
     description: "The realized brand identity. This section features the final logo design in its primary application. The stark white-on-black contrast embodies the brand's sleek, modern, and cosmic aesthetic.",
-    images: ['./assets/4. logo design/logo.png'],
+    images: [getImageUrl('./assets/4. logo design/logo.png')],
     type: 'branding'
   },
   {
     id: '4',
     title: 'Corporate Brochure',
     description: "A comprehensive brochure layout designed for Blackhole Studios. The design maintains the brand's atmospheric negative space while organizing complex information into a clean, readable hierarchy, perfect for client presentations.",
-    images: ['./assets/5. Brochure/inside.png', './assets/5. Brochure/outside.png'],
+    images: [
+      getImageUrl('./assets/5. Brochure/inside.png'),
+      getImageUrl('./assets/5. Brochure/outside.png')
+    ],
     type: 'branding'
   },
   {
-    id: '5',
+    id: '5',  
     title: 'Promotional Flyers',
     description: "Dynamic and high-energy flyer designs created for various events and services. Featuring the 'OnlyPICS' party photography design, these pieces utilize bold gradients and strong silhouettes to capture the excitement of live events.",
-    images: ['./assets/6. Flyers/black hole studios flyer.png'],
+    images: [getImageUrl('./assets/6. Flyers/black hole studios flyer.png')],
     type: 'design'
   },
   {
@@ -57,20 +80,20 @@ const projects: Project[] = [
     title: 'Business Card Design',
     description: "Distinct business card concepts created for Blackhole Studios. The 'Galaxy' design embraces the dark, cosmic theme of the brand, while the 'Watercolor' variant offers a creative, artistic alternative. Both cards feature premium typography and layout designed to leave a lasting impact.",
     images: [
-              './assets/7. Business Card/1.png',
-              './assets/7. Business Card/2.png',
-              './assets/7. Business Card/3.png',
-              './assets/7. Business Card/4.png',
-              './assets/7. Business Card/5.png',
-              './assets/7. Business Card/6.png'
-            ],
+      getImageUrl('./assets/7. Business Card/1.png'),
+      getImageUrl('./assets/7. Business Card/2.png'),
+      getImageUrl('./assets/7. Business Card/3.png'),
+      getImageUrl('./assets/7. Business Card/4.png'),
+      getImageUrl('./assets/7. Business Card/5.png'),
+      getImageUrl('./assets/7. Business Card/6.png')
+    ],
     type: 'branding'
   },
   {
     id: '7',
     title: '2026 Celestial Calendar',
     description: "A specialized 2026 calendar designed for Blackhole Studios. This functional art piece integrates the celestial branding into a year-long format. Each month features unique cosmic imagery consistent with the studio's visual language, turning timekeeping into an experience of the cosmos.",
-    images: ['./assets/8. 2026 Calendar/EPILAN_CALENDAR.png'],
+    images: [getImageUrl('./assets/8. 2026 Calendar/EPILAN_CALENDAR.png')],
     type: 'design'
   },
   {
@@ -86,7 +109,6 @@ const projects: Project[] = [
 const Portfolio: React.FC = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number>(-1);
 
-  // Flatten all images for sequential navigation
   const allDisplayImages = useMemo(() => {
     return projects.flatMap(p => 
       p.images.map(img => ({
@@ -96,7 +118,6 @@ const Portfolio: React.FC = () => {
     );
   }, []);
 
-  // Calculate starting index for each project to correctly map clicks
   const projectStartIndices = useMemo(() => {
     const indices: number[] = [];
     let count = 0;
@@ -157,18 +178,19 @@ const Portfolio: React.FC = () => {
                 ) : (
                     <div 
                         className="rounded-xl overflow-hidden border border-white/10 shadow-2xl group cursor-pointer"
-                        onClick={() => setLightboxIndex(projectStartIndices[projectIndex])}
+                        onClick={() => project.images.length > 0 && setLightboxIndex(projectStartIndices[projectIndex])}
                     >
-                        <img 
-                            src={project.images[0]} 
-                            alt={project.title} 
-                            className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
-                        />
+                        {project.images.length > 0 && (
+                            <img 
+                                src={project.images[0]} 
+                                alt={project.title} 
+                                className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                            />
+                        )}
                     </div>
                 )}
               </div>
 
-              {/* Text Content */}
               <div className="w-full lg:w-2/5 sticky top-24">
                 <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-star-gold border border-star-gold/30 rounded-full mb-4 uppercase">
                     {project.type === 'prototype' ? 'UI/UX Design' : project.type === 'branding' ? 'Brand Identity' : 'Graphic Design'}
@@ -184,7 +206,6 @@ const Portfolio: React.FC = () => {
         </div>
       </div>
       
-      {/* Lightbox */}
       {lightboxIndex !== -1 && (
         <Lightbox
             isOpen={lightboxIndex !== -1}
