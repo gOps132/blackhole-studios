@@ -15,7 +15,7 @@ const projects: Project[] = [
   {
     id: '2',
     title: 'Blackhole Studios - Moodboard & Inspiration',
-    description: "The genesis of the Blackhole Studios visual identity. This moodboard collages celestial textures, deep space palettes, and modern typography references to establish the atmospheric direction of the brand, focusing on the concept of 'creating universes'.",
+    description: "This 'OnlyPICS' design represents the initial spark for what would become Blackhole Studios. The goal was always to capture fleeting moments, and this first concept explored that through the lens of pure, celebratory energy. The core elements—capturing light, energy, and time—were all present. The development process was about refining that raw energy. The brand evolved to a more sophisticated identity, 'Blackhole Studios,' which could encapsulate not just parties, but the entire universe of significant life events. The initial vibrant palette was distilled into a single, powerful accent of gold/orange, symbolizing the light that is preserved from the moment. This shows the journey from a simple idea to a comprehensive brand world.",
     images: [getImageUrl('./assets/2. branding/EPILAN_ACT2.png')],
     type: 'branding'
   },
@@ -29,7 +29,7 @@ const projects: Project[] = [
   {
     id: '3b',
     title: 'Blackhole Studios - Logo Construction',
-    description: "The architectural blueprint of the brand. This wireframe demonstrates the geometric precision and grid systems used to construct the iconic eye-like black hole symbol. It showcases the mathematical approach to ensuring perfect symmetry and visual balance before the final rendering.",
+    description: "The architectural blueprint of the Blackhole Studios brand. This wireframe reveals the geometric precision and grid systems used to construct the iconic, eye-like black hole symbol. It highlights the mathematical approach taken to ensure perfect symmetry and visual balance, forming the foundation of the final rendered logo.",
     images: [
       getImageUrl('./assets/4. logo design/1.png'),
       getImageUrl('./assets/4. logo design/2.png'),
@@ -40,14 +40,14 @@ const projects: Project[] = [
   {
     id: '3c',
     title: 'Blackhole Studios - Final Identity',
-    description: "The realized brand identity. This section features the final logo design in its primary application. The stark white-on-black contrast embodies the brand's sleek, modern, and cosmic aesthetic.",
+    description: "The final logo for Blackhole Studios is a powerful visual metaphor. It fuses the technical precision of a camera aperture with the artistic perspective of the human eye. Surrounding this core are sweeping lines that mimic the gravitational rings of a black hole, symbolizing the studio's power to 'capture every moment.' Paired with a sleek, futuristic typeface, the identity is modern, memorable, and perfectly aligned with the brand's cosmic and creative ethos.",
     images: [getImageUrl('./assets/4. logo design/logo.png')],
     type: 'branding'
   },
   {
     id: '4',
     title: 'Corporate Brochure',
-    description: "A comprehensive brochure layout designed for Blackhole Studios. The design maintains the brand's atmospheric negative space while organizing complex information into a clean, readable hierarchy, perfect for client presentations.",
+    description: "A comprehensive brochure designed for Blackhole Studios. This layout leverages the brand's atmospheric use of negative space to organize complex information into a clean, readable hierarchy. The result is a sophisticated and compelling piece, perfect for client presentations and marketing.",
     images: [
       getImageUrl('./assets/5. Brochure/inside.png'),
       getImageUrl('./assets/5. Brochure/outside.png')
@@ -57,7 +57,7 @@ const projects: Project[] = [
   {
     id: '5',  
     title: 'Promotional Flyers',
-    description: "Dynamic and high-energy flyer designs created for various events and services. Featuring the 'OnlyPICS' party photography design, these pieces utilize bold gradients and strong silhouettes to capture the excitement of live events.",
+    description: "A versatile promotional flyer designed to showcase the core photography services of Blackhole Studios. The design uses bold, impactful typography and a dynamic, collage-style layout to effectively communicate a wide range of offerings, from weddings and family portraits to corporate events. The 'Capture Every Moment' tagline is brought to life through a compelling visual narrative that is both energetic and professional, inviting clients to preserve their most cherished memories.",
     images: [getImageUrl('./assets/6. Flyers/black hole studios flyer.png')],
     type: 'design'
   },
@@ -77,8 +77,8 @@ const projects: Project[] = [
   },
   {
     id: '7',
-    title: '2026 Celestial Calendar',
-    description: "A specialized 2026 calendar designed for Blackhole Studios. This functional art piece integrates the celestial branding into a year-long format. Each month features unique cosmic imagery consistent with the studio's visual language, turning timekeeping into an experience of the cosmos.",
+    title: '2026 Studio Calendar',
+    description: "This calendar grounds the cosmic theme of Blackhole Studios by focusing on human connection. It functions as a year-long portfolio, showcasing striking portraits that represent the core of our services. The modern design ensures it is not just a calendar, but a statement piece reflecting the studio's quality and aesthetic.",
     images: [getImageUrl('./assets/8. 2026 Calendar/EPILAN_CALENDAR.png')],
     type: 'design'
   },
