@@ -7,49 +7,49 @@ const projects: Project[] = [
     id: '1',
     title: 'City of Dreams - Digital Wallpaper',
     description: "I made this image of a city in night time to represent the romanticization of a big city. Lots of people romanticize moving to a place where they can find opportunity, a place they name a 'city of dreams'. Where bright neon lights outshine the brightest star and the darkest alleys where the sun can't reach. A city where a person can live out their dreams, may be the same one that can consume them.",
-    images: ['/assets/1. wallpaper/Epilan_act1.png'],
+    images: ['./assets/1. wallpaper/Epilan_act1.png'],
     type: 'design'
   },
   {
     id: '2',
     title: 'Blackhole Studios - Moodboard & Inspiration',
     description: "The genesis of the Blackhole Studios visual identity. This moodboard collages celestial textures, deep space palettes, and modern typography references to establish the atmospheric direction of the brand, focusing on the concept of 'creating universes'.",
-    images: ['assets/2. branding/EPILAN_ACT2.png'],
+    images: ['.assets/2. branding/EPILAN_ACT2.png'],
     type: 'branding'
   },
   {
     id: '3a',
     title: 'Logo Design Concepts',
     description: "A showcase of initial logo sketches and concepts for different brands, including 'Celeb Snap,' 'Blackhole Studios,' and 'Snap Party.' This demonstrates the creative process from ideation to final design.",
-    images: ['assets/3. logo design wireframe/Epilan_act3.png'],
+    images: ['./assets/3. logo design wireframe/Epilan_act3.png'],
     type: 'design'
   },
   {
     id: '3b',
     title: 'Blackhole Studios - Logo Construction',
     description: "The architectural blueprint of the brand. This wireframe demonstrates the geometric precision and grid systems used to construct the iconic eye-like black hole symbol. It showcases the mathematical approach to ensuring perfect symmetry and visual balance before the final rendering.",
-    images: ['assets/4. logo design/1.png', 'assets/4. logo design/2.png', 'assets/4. logo design/3.png'],
+    images: ['./assets/4. logo design/1.png', './assets/4. logo design/2.png', './assets/4. logo design/3.png'],
     type: 'branding'
   },
   {
     id: '3c',
     title: 'Blackhole Studios - Final Identity',
     description: "The realized brand identity. This section features the final logo design in its primary application. The stark white-on-black contrast embodies the brand's sleek, modern, and cosmic aesthetic.",
-    images: ['assets/4. logo design/logo.png'],
+    images: ['./assets/4. logo design/logo.png'],
     type: 'branding'
   },
   {
     id: '4',
     title: 'Corporate Brochure',
     description: "A comprehensive brochure layout designed for Blackhole Studios. The design maintains the brand's atmospheric negative space while organizing complex information into a clean, readable hierarchy, perfect for client presentations.",
-    images: ['assets/5. Brochure/inside.png', 'assets/5. Brochure/outside.png'],
+    images: ['./assets/5. Brochure/inside.png', './assets/5. Brochure/outside.png'],
     type: 'branding'
   },
   {
     id: '5',
     title: 'Promotional Flyers',
     description: "Dynamic and high-energy flyer designs created for various events and services. Featuring the 'OnlyPICS' party photography design, these pieces utilize bold gradients and strong silhouettes to capture the excitement of live events.",
-    images: ['assets/6. Flyers/black hole studios flyer.png'],
+    images: ['./assets/6. Flyers/black hole studios flyer.png'],
     type: 'design'
   },
   {
@@ -57,12 +57,12 @@ const projects: Project[] = [
     title: 'Business Card Design',
     description: "Distinct business card concepts created for Blackhole Studios. The 'Galaxy' design embraces the dark, cosmic theme of the brand, while the 'Watercolor' variant offers a creative, artistic alternative. Both cards feature premium typography and layout designed to leave a lasting impact.",
     images: [
-              'assets/7. Business Card/1.png',
-              'assets/7. Business Card/2.png',
-              'assets/7. Business Card/3.png',
-              'assets/7. Business Card/4.png',
-              'assets/7. Business Card/5.png',
-              'assets/7. Business Card/6.png'
+              './assets/7. Business Card/1.png',
+              './assets/7. Business Card/2.png',
+              './assets/7. Business Card/3.png',
+              './assets/7. Business Card/4.png',
+              './assets/7. Business Card/5.png',
+              './assets/7. Business Card/6.png'
             ],
     type: 'branding'
   },
@@ -70,7 +70,7 @@ const projects: Project[] = [
     id: '7',
     title: '2026 Celestial Calendar',
     description: "A specialized 2026 calendar designed for Blackhole Studios. This functional art piece integrates the celestial branding into a year-long format. Each month features unique cosmic imagery consistent with the studio's visual language, turning timekeeping into an experience of the cosmos.",
-    images: ['assets/8. 2026 Calendar/EPILAN_CALENDAR.png'],
+    images: ['./assets/8. 2026 Calendar/EPILAN_CALENDAR.png'],
     type: 'design'
   },
   {
