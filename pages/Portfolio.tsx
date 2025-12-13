@@ -124,7 +124,7 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-screen-2xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Selected Works</h1>
             <p className="text-gray-400 max-w-2xl mx-auto">
@@ -154,7 +154,7 @@ const Portfolio: React.FC = () => {
                         {project.images.map((img, i) => (
                             <div 
                                 key={i} 
-                                className={`rounded-xl overflow-hidden border border-white/10 shadow-lg hover:border-star-gold/50 transition-colors cursor-pointer ${i === 0 ? 'col-span-2' : ''}`}
+                                className={`rounded-xl overflow-hidden border border-white/10 shadow-lg hover:border-star-gold/50 transition-colors cursor-pointer ${i === 0 ? 'col-span-2' : ''} aspect-[16/9]`}
                                 onClick={() => setLightboxIndex(projectStartIndices[projectIndex] + i)}
                             >
                                 <img src={img} alt={`${project.title} ${i + 1}`} className="w-full h-full object-cover" />
@@ -163,20 +163,19 @@ const Portfolio: React.FC = () => {
                     </div>
                 ) : (
                     <div 
-                        className="rounded-xl overflow-hidden border border-white/10 shadow-2xl group cursor-pointer"
-                        onClick={() => project.images.length > 0 && setLightboxIndex(projectStartIndices[projectIndex])}
+                        className="rounded-xl overflow-hidden border border-white/10 shadow-2xl group cursor-pointer aspect-[16/9]"
+                        onClick={() => setLightboxIndex(projectStartIndices[projectIndex])}
                     >
-                        {project.images.length > 0 && (
-                            <img 
-                                src={project.images[0]} 
-                                alt={project.title} 
-                                className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" 
-                            />
-                        )}
+                        <img 
+                            src={project.images[0]} 
+                            alt={project.title} 
+                            className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" 
+                        />
                     </div>
                 )}
               </div>
 
+              {/* Text Content */}
               <div className="w-full lg:w-2/5 sticky top-24">
                 <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-star-gold border border-star-gold/30 rounded-full mb-4 uppercase">
                     {project.type === 'prototype' ? 'UI/UX Design' : project.type === 'branding' ? 'Brand Identity' : 'Graphic Design'}
@@ -192,6 +191,7 @@ const Portfolio: React.FC = () => {
         </div>
       </div>
       
+      {/* Lightbox */}
       {lightboxIndex !== -1 && (
         <Lightbox
             isOpen={lightboxIndex !== -1}
