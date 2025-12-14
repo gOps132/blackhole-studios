@@ -5,7 +5,11 @@ export interface Project {
   images: string[];
   type: 'design' | 'branding' | 'prototype' | 'photography';
   embedUrl?: string;
+  canvaUrl?: string;
+  pdfUrl?: string;
+  figmaUrl?: string;
 }
+
 
 export interface NavItem {
   label: string;

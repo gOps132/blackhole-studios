@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Project } from '../types';
 import Lightbox from '../components/Lightbox';
+import { ExternalLink, FileText, Figma } from 'lucide-react';
 
 import { getImageUrl } from '../components/ImportHelper';
 
@@ -10,14 +11,15 @@ const projects: Project[] = [
     title: 'City of Dreams - Digital Wallpaper',
     description: "I made this image of a city in night time to represent the romanticization of a big city. Lots of people romanticize moving to a place where they can find opportunity, a place they name a 'city of dreams'. Where bright neon lights outshine the brightest star and the darkest alleys where the sun can't reach. A city where a person can live out their dreams, may be the same one that can consume them.",
     images: [getImageUrl('./assets/1. wallpaper/Epilan_act1.png')],
-    type: 'design'
+    type: 'design',
   },
   {
     id: '2',
     title: 'Blackhole Studios - Moodboard & Inspiration',
     description: "This 'OnlyPICS' design represents the initial spark for what would become Blackhole Studios. The goal was always to capture fleeting moments, and this first concept explored that through the lens of pure, celebratory energy. The core elements—capturing light, energy, and time—were all present. The development process was about refining that raw energy. The brand evolved to a more sophisticated identity, 'Blackhole Studios,' which could encapsulate not just parties, but the entire universe of significant life events. The initial vibrant palette was distilled into a single, powerful accent of gold/orange, symbolizing the light that is preserved from the moment. This shows the journey from a simple idea to a comprehensive brand world.",
     images: [getImageUrl('./assets/2. branding/EPILAN_ACT2.png')],
-    type: 'branding'
+    type: 'branding',
+    canvaUrl: 'https://www.canva.com/design/DAGwgYJ7G_s/Yl6TYRtw3d7mngEy4V3_mg/view?utm_content=DAGwgYJ7G_s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he483896f5f'
   },
   {
     id: '3a',
@@ -35,7 +37,8 @@ const projects: Project[] = [
       getImageUrl('./assets/4. logo design/2.png'),
       getImageUrl('./assets/4. logo design/3.png')
     ],
-    type: 'branding'
+    type: 'branding',
+    canvaUrl: 'https://www.canva.com/design/DAGzx4augwg/EggIwxk3GL8La1A7K3th1g/view?utm_content=DAGzx4augwg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hff36429a06'
   },
   {
     id: '3c',
@@ -52,14 +55,16 @@ const projects: Project[] = [
       getImageUrl('./assets/5. Brochure/inside.png'),
       getImageUrl('./assets/5. Brochure/outside.png')
     ],
-    type: 'branding'
+    type: 'branding',
+    canvaUrl: 'https://www.canva.com/design/DAGzx3ZO_vk/2wPKMe_9KG5SpFHveNR1-Q/view?utm_content=DAGzx3ZO_vk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6ac7bf7eb4'
   },
   {
-    id: '5',  
+    id: '5',
     title: 'Promotional Flyers',
     description: "A versatile promotional flyer designed to showcase the core photography services of Blackhole Studios. The design uses bold, impactful typography and a dynamic, collage-style layout to effectively communicate a wide range of offerings, from weddings and family portraits to corporate events. The 'Capture Every Moment' tagline is brought to life through a compelling visual narrative that is both energetic and professional, inviting clients to preserve their most cherished memories.",
     images: [getImageUrl('./assets/6. Flyers/black hole studios flyer.png')],
-    type: 'design'
+    type: 'design',
+    canvaUrl: 'https://www.canva.com/design/DAG1uBtxq1s/QMukgaGPIio8uInJcrXsow/view?utm_content=DAG1uBtxq1s&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4a355b4380'
   },
   {
     id: '6',
@@ -73,22 +78,25 @@ const projects: Project[] = [
       getImageUrl('./assets/7. Business Card/5.png'),
       getImageUrl('./assets/7. Business Card/6.png')
     ],
-    type: 'branding'
+    type: 'branding',
+    canvaUrl: 'https://www.canva.com/design/DAG3D1gsw3g/R411MVEXzJke1hXPQEmD3Q/view?utm_content=DAG3D1gsw3g&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=haeeae57ea1'
   },
   {
     id: '7',
     title: '2026 Studio Calendar',
     description: "This calendar grounds the cosmic theme of Blackhole Studios by focusing on human connection. It functions as a year-long portfolio, showcasing striking portraits that represent the core of our services. The modern design ensures it is not just a calendar, but a statement piece reflecting the studio's quality and aesthetic.",
     images: [getImageUrl('./assets/8. 2026 Calendar/EPILAN_CALENDAR.png')],
-    type: 'design'
+    type: 'design',
+    canvaUrl: 'https://www.canva.com/design/DAG0bzjNEPM/DpebEoPSHrn7HqZ5xmBCKA/view?utm_content=DAG0bzjNEPM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7651385038'
   },
   {
     id: '8',
     title: 'Mobile App Prototype',
     description: "A prototype for a mobile application designed in Figma. The app is designed to streamline the client booking and gallery viewing process for Blackhole Studios.",
-    images: [], 
+    images: [],
     type: 'prototype',
-    embedUrl: 'https://embed.figma.com/proto/3hrRGKLAStvlhU7z0pmSPl/Untitled?node-id=1-3&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A6&embed-host=share'
+    embedUrl: 'https://embed.figma.com/proto/3hrRGKLAStvlhU7z0pmSPl/Untitled?node-id=1-3&p=f&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A6&embed-host=share',
+    figmaUrl: 'https://www.figma.com/design/B5SYEf5tEX4zYG5q5gOziQ/blackhole_studios_basic_mockup--Community-?node-id=0-1&t=Th2onYA8mMqaZ8eJ-1'
   }
 ];
 
@@ -96,7 +104,7 @@ const Portfolio: React.FC = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number>(-1);
 
   const allDisplayImages = useMemo(() => {
-    return projects.flatMap(p => 
+    return projects.flatMap(p =>
       p.images.map(img => ({
         src: img,
         title: p.title
@@ -108,8 +116,8 @@ const Portfolio: React.FC = () => {
     const indices: number[] = [];
     let count = 0;
     projects.forEach(p => {
-        indices.push(count);
-        count += p.images.length;
+      indices.push(count);
+      count += p.images.length;
     });
     return indices;
   }, []);
@@ -126,82 +134,120 @@ const Portfolio: React.FC = () => {
     <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Selected Works</h1>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-                Explore a collection of my latest projects, ranging from brand identity to digital illustration and UI/UX design.
-            </p>
+          <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Selected Works</h1>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Explore a collection of my latest projects, ranging from brand identity to digital illustration and UI/UX design.
+          </p>
         </div>
 
         <div className="space-y-32 px-4 md:px-0">
           {projects.map((project, projectIndex) => (
             <div key={project.id} className={`flex flex-col ${projectIndex % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 items-start`}>
-              
+
               {/* Visual Asset Container */}
               <div className="w-full lg:w-3/5">
                 {project.type === 'prototype' && project.embedUrl ? (
-                    <div className="w-full aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-black">
-                         <iframe 
-                            style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }} 
-                            width="100%" 
-                            height="100%" 
-                            src={project.embedUrl} 
-                            allowFullScreen
-                            title={project.title}
-                        ></iframe>
-                    </div>
+                  <div className="w-full aspect-video rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+                    <iframe
+                      style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
+                      width="100%"
+                      height="100%"
+                      src={project.embedUrl}
+                      allowFullScreen
+                      title={project.title}
+                    ></iframe>
+                  </div>
                 ) : project.images.length > 1 ? (
-                    <div className="grid grid-cols-2 gap-4">
-                        {project.images.map((img, i) => (
-                            <div 
-                                key={i} 
-                                className={`rounded-xl overflow-hidden border border-white/10 shadow-lg hover:border-star-gold/50 transition-colors cursor-pointer ${i === 0 ? 'col-span-2' : ''} aspect-[16/9]`}
-                                onClick={() => setLightboxIndex(projectStartIndices[projectIndex] + i)}
-                            >
-                                <img src={img} alt={`${project.title} ${i + 1}`} className="w-full h-full object-cover" />
-                            </div>
-                        ))}
-                    </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    {project.images.map((img, i) => (
+                      <div
+                        key={i}
+                        className={`rounded-xl overflow-hidden border border-white/10 shadow-lg hover:border-star-gold/50 transition-colors cursor-pointer ${i === 0 ? 'col-span-2' : ''} aspect-[16/9]`}
+                        onClick={() => setLightboxIndex(projectStartIndices[projectIndex] + i)}
+                      >
+                        <img src={img} alt={`${project.title} ${i + 1}`} className="w-full h-full object-cover" />
+                      </div>
+                    ))}
+                  </div>
                 ) : (
-                    <div 
-                        className="rounded-xl overflow-hidden border border-white/10 shadow-2xl group cursor-pointer aspect-[16/9]"
-                        onClick={() => setLightboxIndex(projectStartIndices[projectIndex])}
-                    >
-                        <img 
-                            src={project.images[0]} 
-                            alt={project.title} 
-                            className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" 
-                        />
-                    </div>
+                  <div
+                    className="rounded-xl overflow-hidden border border-white/10 shadow-2xl group cursor-pointer aspect-[16/9]"
+                    onClick={() => setLightboxIndex(projectStartIndices[projectIndex])}
+                  >
+                    <img
+                      src={project.images[0]}
+                      alt={project.title}
+                      className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
                 )}
               </div>
 
               {/* Text Content */}
               <div className="w-full lg:w-2/5 sticky top-24">
                 <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-star-gold border border-star-gold/30 rounded-full mb-4 uppercase">
-                    {project.type === 'prototype' ? 'UI/UX Design' : project.type === 'branding' ? 'Brand Identity' : 'Graphic Design'}
+                  {project.type === 'prototype' ? 'UI/UX Design' : project.type === 'branding' ? 'Brand Identity' : 'Graphic Design'}
                 </span>
                 <h2 className="text-3xl font-display font-bold text-white mb-6">{project.title}</h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-star-gold to-nebula-orange mb-8"></div>
                 <p className="text-gray-300 text-lg leading-relaxed">
-                    {project.description}
+                  {project.description}
                 </p>
+                {/* Resource Buttons */}
+                <div className="mt-8 flex flex-wrap gap-4">
+                  {project.canvaUrl && (
+                    <a
+                      href={project.canvaUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 rounded-lg bg-[#00C4CC]/10 text-[#00C4CC] border border-[#00C4CC]/20 hover:bg-[#00C4CC]/20 transition-colors font-medium text-sm group"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                      View on Canva
+                    </a>
+                  )}
+
+                  {project.pdfUrl && (
+                    <a
+                      href={project.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 rounded-lg bg-red-500/10 text-red-400 border border-red-500/20 hover:bg-red-500/20 transition-colors font-medium text-sm group"
+                    >
+                      <FileText className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                      View PDF
+                    </a>
+                  )}
+
+                  {project.figmaUrl && (
+                    <a
+                      href={project.figmaUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center px-4 py-2 rounded-lg bg-purple-500/10 text-purple-400 border border-purple-500/20 hover:bg-purple-500/20 transition-colors font-medium text-sm group"
+                    >
+                      <Figma className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                      View on Figma
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-      
+
       {/* Lightbox */}
       {lightboxIndex !== -1 && (
         <Lightbox
-            isOpen={lightboxIndex !== -1}
-            imageSrc={allDisplayImages[lightboxIndex].src}
-            title={allDisplayImages[lightboxIndex].title}
-            onClose={() => setLightboxIndex(-1)}
-            onNext={handleNext}
-            onPrev={handlePrev}
-            hasNext={true}
-            hasPrev={true}
+          isOpen={lightboxIndex !== -1}
+          imageSrc={allDisplayImages[lightboxIndex].src}
+          title={allDisplayImages[lightboxIndex].title}
+          onClose={() => setLightboxIndex(-1)}
+          onNext={handleNext}
+          onPrev={handlePrev}
+          hasNext={true}
+          hasPrev={true}
         />
       )}
     </div>
